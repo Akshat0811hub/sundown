@@ -21,3 +21,9 @@ elems.forEach(function(e){
         fixed.style.background = `url(${image})`
     })
 })
+
+
+var loader=document.querySelector("#loader")
+setTimeout(function(){
+    loader.style.top = "-100%"
+},4000)
