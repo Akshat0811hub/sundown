@@ -527,48 +527,82 @@ nav {
     padding: 1vw 3vw;
 }
 
+#footer #tags{
+    z-index:100;    
+    padding: 0vw 5vw;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+#tags{
+    justify-content: space-between;
+    
+}
+
+#footer #tags h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
 #footer h1{
     font-size: 23vw;
 }
 
-/* #footer-div{
-    height: 10vh;
-    top: 0;
-    width: 100%;
+
+#footer-div {
+    height: 20vh; 
+    width: 120%; 
     background-color: #FE320A;
-    filter: blur(20px);
-    animation-name: red-animate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 2s;
-    animation-direction: alternate;
-
-}
- 
-#footer-div1{
-    height: 30vh;
-    width: 100%;
-    background-color: yellow;
-    filter: blur(20px);
-    animation-name: red-animate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 2s;
-    animation-direction: alternate;
+    filter: blur(25px);
+    position: absolute;
+    top: -5vh;
+    /* left: -10%; */
+    animation: red-animate 4s ease-in-out infinite alternate;
 }
 
-#footer-bottom{
+#footer-div1 {
+    height: 40vh; 
+    width: 120%; 
+    background-color: #FE320A;
+    filter: blur(25px);
+    position: absolute;
+    top: 10vh;
+    /* left: -10%; */
+    animation: yellow-animate 6s ease-in-out infinite alternate;
+}
+
+#footer-bottom {
     border-top: 1px solid #dadada;
     height: 10vh;
     width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
 @keyframes red-animate {
-    from{
-        translate: transform(10%,-10%) skew(0);
+    0% {
+        transform: translate(-20%, -10%) skew(0);
     }
-    to{
-        translate: transform(-10% , 10%) skew(-12deg);
+    50% {
+        transform: translate(10%, 10%) skew(-8deg);
     }
-    
-} */
+    100% {
+        transform: translate(-20%, -10%) skew(0);
+    }
+}
+
+@keyframes yellow-animate {
+    0% {
+        transform: translate(10%, -15%) skew(0);
+    }
+    50% {
+        transform: translate(-15%, 15%) skew(12deg);
+    }
+    100% {
+        transform: translate(10%, -15%) skew(0);
+    }
+}
+
+#footer-bottom{
+    display: flex;
+    justify-content: space-between;
+}
