@@ -449,28 +449,6 @@ nav {
     width: 100%;
 }
 
-/* #boxes{
-    display: flex;
-    gap: 15px;
-    padding: 10vw 0vw;
-    margin-right: 10px;
-    overflow: hidden;
-    border-left: 1px solid black;
-}
-
-#box-1{
-    width: 50vh;
-    height: 50vh;
-    border-left: 1px solid black;
-    padding: 2vh;
-}
-
-#box-1 p{
-    text-align: left;
-} */
-
-
-/* ***************** */
 
 #boxes{
 
@@ -493,7 +471,7 @@ nav {
 }
 
 #box-1 h2 {
-  /* color: #0ff; */
+  
   color: black;
   font-size: 2rem;
   position: relative;
@@ -527,3 +505,70 @@ nav {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
+
+#main{
+    position: relative;
+    z-index: 10;
+    min-height: 200vh;
+    padding-bottom: 130vh;
+}
+
+#footer {
+    height: 105vh;
+    width: 100%;
+    color: white;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+#footer h1{
+    font-size: 23vw;
+}
+
+/* #footer-div{
+    height: 10vh;
+    top: 0;
+    width: 100%;
+    background-color: #FE320A;
+    filter: blur(20px);
+    animation-name: red-animate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate;
+
+}
+ 
+#footer-div1{
+    height: 30vh;
+    width: 100%;
+    background-color: yellow;
+    filter: blur(20px);
+    animation-name: red-animate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+
+#footer-bottom{
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+}
+
+@keyframes red-animate {
+    from{
+        translate: transform(10%,-10%) skew(0);
+    }
+    to{
+        translate: transform(-10% , 10%) skew(-12deg);
+    }
+    
+} */
