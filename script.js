@@ -17,7 +17,7 @@ elemC.addEventListener("mouseleave",function(){
 var elems = document.querySelectorAll(".elem")
 elems.forEach(function(e){
     e.addEventListener("mouseenter",function(){
-        var image = e.getAttribute("data-image")
+        var image = e.getAttribute("data-image") 
         fixed.style.background = `url(${image})`
     })
 })

@@ -499,6 +499,8 @@ nav {
 #box-1:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px black;
+  background-color: #262626;
+  color: white;
 }
 
 #box-1:hover::before {
@@ -654,4 +656,314 @@ nav {
     100%{
         opacity: 0;
     }
+}
+
+/* ****************************** */
+#hamburger {
+  display: none; /* default hidden on big screens */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  overflow-x: hidden;
+}
+
+#hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #262626;
+}
+
+#hamburger-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: #EFEAE3;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#hamburger-menu a {
+  text-decoration: none;
+  color: #262626;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 375px) {
+  #nav-part2 {
+    display: none;
+  }
+
+  #hamburger {
+    display: flex;
+  }
+}
+
+
+/* *************************** */
+
+@media (max-width: 375px) {
+  /* Global adjustments for smaller screens */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  /* Page 1 */
+  #page1 {
+    min-height: auto; /* Adjust height for content */
+    padding: 0 5vw; /* Increase horizontal padding for better spacing */
+  }
+
+  nav {
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  #nav-part2 {
+    flex-direction: column; /* Stack navigation links */
+    gap: 10px; /* Reduce gap */
+    margin-top: 15px; /* Add some space from the logo/nav-part1 */
+    width: 100%; /* Make nav-part2 take full width */
+    align-items: flex-start; /* Align links to the start */
+  }
+
+  #nav-part2 li {
+    gap: 0; /* Remove gap between list items if they are stacked */
+  }
+
+  #nav-part2 a {
+    font-size: 16px; /* Adjust font size */
+    padding: 8px 0; /* Adjust padding for links */
+  }
+
+  #center {
+    margin-top: 50px; /* Reduce top margin */
+    height: auto; /* Allow content to dictate height */
+    flex-direction: column; /* Stack left and right sections */
+    align-items: flex-start; /* Align items to the start */
+    padding-bottom: 5vw; /* Adjust bottom padding */
+    border-bottom: none; /* Remove border if it looks odd on mobile */
+  }
+
+  #left h3 {
+    width: 100%; /* Take full width */
+    font-size: 4vw; /* Adjust font size relative to viewport width */
+    line-height: 5vw; /* Adjust line height */
+    margin-bottom: 20px; /* Add space below heading */
+  }
+
+  #center h1 {
+    font-size: 12vw; /* Larger font size for main heading */
+    line-height: 12vw; /* Adjust line height */
+    text-align: left; /* Align to left */
+  }
+
+  #page1 video {
+    width: 100%;
+    margin-top: 8vw; /* Increase top margin for video */
+    border-radius: 15px; /* Slightly smaller border-radius */
+  }
+
+  #hero-shape {
+    width: 80vw; /* Make shape larger relative to viewport */
+    height: 60vw;
+    top: 65vh; /* Adjust vertical position */
+    filter: blur(15px); /* Reduce blur for performance/aesthetics */
+  }
+
+  #hero-1,
+  #hero-2,
+  #hero-3 {
+    height: 40vw; /* Adjust size of hero shapes */
+    width: 40vw;
+    filter: blur(15px); /* Reduce blur */
+  }
+
+  /* Page 2 */
+  #page2 {
+    min-height: auto;
+    padding: 10vw 0; /* Adjust padding */
+  }
+
+  #moving-text h1 {
+    font-size: 15vw; /* Increase font size for moving text */
+  }
+
+  #gola {
+    height: 40px; /* Smaller circle size */
+    width: 40px;
+    margin: 1vw 2vw; /* Adjust margin */
+  }
+
+  #page2-bottom {
+    flex-direction: column; /* Stack content vertically */
+    padding: 6vw 4vw; /* Adjust padding */
+    height: auto; /* Auto height */
+  }
+
+  #page2-bottom h1 {
+    font-size: 6vw; /* Adjust font size */
+    width: 100%; /* Take full width */
+    line-height: 7vw;
+    margin-bottom: 5vw; /* Add space below heading */
+  }
+
+  #bottom-part2 {
+    width: 80%; /* Take more width */
+    top: 0; /* Reset top position */
+  }
+
+  #bottom-part2 img {
+    border-radius: 10px; /* Smaller border-radius */
+  }
+
+  #bottom-part2 p {
+    margin-top: 4vw; /* Adjust margin */
+    font-size: 4vw; /* Adjust font size */
+  }
+
+  #gooey {
+    height: 40vw; /* Adjust gooey size */
+    width: 40vw;
+    top: 5%; /* Adjust position */
+    right: 0; /* Adjust position */
+    filter: blur(15px); /* Reduce blur */
+  }
+
+  #gooey1 {
+    height: 50vw; /* Adjust gooey1 size */
+    width: 50vw;
+  }
+
+  /* Elements */
+  .elem {
+    height: auto; /* Allow content to dictate height */
+    flex-direction: column; /* Stack content if needed, though h2 is single */
+    align-items: flex-start; /* Align content to the start */
+  }
+
+  .elem h2 {
+    font-size: 8vw; /* Adjust font size */
+    padding: 4vw 2vw; /* Adjust padding */
+    height: auto; /* Auto height */
+    text-align: left; /* Align text to left */
+  }
+
+  #fixed-image {
+    height: 60vw; /* Adjust size for mobile */
+    width: 80vw;
+    left: 10%; /* Center it better */
+    top: 15%; /* Adjust vertical position */
+  }
+
+  /* Center (This appears to be a section for a split layout) */
+  #centre {
+    flex-direction: column; /* Stack left and right columns */
+    padding: 4vw 4vw; /* Adjust padding */
+  }
+
+  #centre #left {
+    width: 100%; /* Take full width */
+    min-height: 50vh; /* Adjust min-height */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  #centre #right {
+    width: 100%; /* Take full width */
+    min-height: auto; /* Auto height */
+    right: 0; /* Reset right position */
+  }
+
+  #centre #right img {
+    width: 100%;
+    min-height: auto; /* Auto height for image */
+  }
+
+  #written-content {
+    padding: 10vw 8vw; /* Adjust padding */
+    font-size: 6vw; /* Adjust font size */
+    width: auto; /* Auto width */
+  }
+
+  #written-content a {
+    line-height: 1.2; /* Adjust line height */
+    font-size: 7vw; /* Adjust font size */
+  }
+
+  #written-para {
+    width: 100%; /* Take full width */
+    font-size: 4vw; /* Adjust font size */
+  }
+
+  /* Page 5 - Boxes */
+  #boxes {
+    height: auto; /* Auto height */
+    flex-direction: column; /* Stack boxes vertically */
+    padding: 5vw; /* Add padding */
+  }
+
+  #box-1 {
+    width: 90%; /* Take more width */
+    height: auto; /* Auto height for content */
+    padding: 5vw; /* Adjust padding */
+    margin-bottom: 20px; /* Add space between boxes */
+    border-left: none; /* Remove left border if desired */
+    border-bottom: 1px solid black; /* Add bottom border for separation */
+  }
+
+  #box-1 h2 {
+    font-size: 6vw; /* Adjust font size */
+  }
+
+  /* Footer */
+  #footer {
+    height: auto; /* Auto height */
+    padding: 5vw 4vw; /* Adjust padding */
+  }
+
+  #footer #tags {
+    padding: 0; /* Remove horizontal padding */
+    margin-bottom: 20px; /* Adjust margin */
+    line-height: 1.5; /* Adjust line height */
+  }
+
+  #footer #tags h1 {
+    font-size: 6vw; /* Adjust font size */
+  }
+
+  #footer h1 {
+    font-size: 18vw; /* Adjust large footer text size */
+  }
+
+  #footer-div,
+  #footer-div1 {
+    height: 20vw; /* Adjust size of gooey shapes */
+    width: 100%; /* Adjust width */
+    filter: blur(15px); /* Reduce blur */
+    top: -2vw; /* Adjust position */
+  }
+
+  #footer-div1 {
+    top: 5vw; /* Adjust position */
+  }
+
+  #footer-bottom {
+    flex-direction: column; /* Stack bottom content */
+    height: auto; /* Auto height */
+    padding-top: 20px; /* Add padding */
+  }
+
+  /* Loader */
+  #loader h1 {
+    font-size: 8vw; /* Adjust font size for loader text */
+  }
 }
